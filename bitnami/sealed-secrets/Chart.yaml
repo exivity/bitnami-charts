@@ -11,7 +11,7 @@ apiVersion: v2
 appVersion: 0.31.0
 dependencies:
 - name: common
-  repository: oci://registry-1.docker.io/bitnamicharts
+  repository: https://exivity.github.io/bitnami-charts
   tags:
   - bitnami-common
   version: 2.x.x
@@ -31,4 +31,4 @@ name: sealed-secrets
 sources:
 - https://github.com/bitnami/charts/tree/main/bitnami/sealed-secrets
 - https://github.com/bitnami-labs/sealed-secrets
-version: 2.5.21
+version: 2.5.22

@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - update-dependencies  # Temporarily allow releases from this branch for testing
     paths:
       - 'bitnami/**'
 

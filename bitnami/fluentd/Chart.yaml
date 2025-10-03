@@ -11,7 +11,7 @@ apiVersion: v2
 appVersion: 1.19.0
 dependencies:
 - name: common
-  repository: oci://registry-1.docker.io/bitnamicharts
+  repository: https://exivity.github.io/bitnami-charts
   tags:
   - bitnami-common
   version: 2.x.x
@@ -31,4 +31,4 @@ maintainers:
 name: fluentd
 sources:
 - https://github.com/bitnami/charts/tree/main/bitnami/fluentd
-version: 7.2.7
+version: 7.2.8

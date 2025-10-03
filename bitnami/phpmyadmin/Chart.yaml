@@ -14,12 +14,12 @@ appVersion: 5.2.2
 dependencies:
 - condition: db.bundleTestDB
   name: mariadb
-  repository: oci://registry-1.docker.io/bitnamicharts
+  repository: https://exivity.github.io/bitnami-charts
   tags:
   - phpmyadmin-database
   version: 22.x.x
 - name: common
-  repository: oci://registry-1.docker.io/bitnamicharts
+  repository: https://exivity.github.io/bitnami-charts
   tags:
   - bitnami-common
   version: 2.x.x
@@ -38,4 +38,4 @@ maintainers:
 name: phpmyadmin
 sources:
 - https://github.com/bitnami/charts/tree/main/bitnami/phpmyadmin
-version: 20.0.2
+version: 20.0.3

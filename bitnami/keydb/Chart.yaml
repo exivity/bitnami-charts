@@ -15,7 +15,7 @@ apiVersion: v2
 appVersion: 6.3.4
 dependencies:
 - name: common
-  repository: oci://registry-1.docker.io/bitnamicharts
+  repository: https://exivity.github.io/bitnami-charts
   tags:
   - bitnami-common
   version: 2.x.x
@@ -35,4 +35,4 @@ name: keydb
 sources:
 - https://github.com/bitnami/charts/tree/main/bitnami/keydb
 - https://github.com/bitnami/containers/tree/main/bitnami/keydb
-version: 0.5.24
+version: 0.5.25

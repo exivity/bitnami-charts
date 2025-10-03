@@ -18,18 +18,18 @@ appVersion: 2.6.0
 dependencies:
 - condition: etcd.enabled
   name: etcd
-  repository: oci://registry-1.docker.io/bitnamicharts
+  repository: https://exivity.github.io/bitnami-charts
   version: 12.x.x
 - condition: kafka.enabled
   name: kafka
-  repository: oci://registry-1.docker.io/bitnamicharts
+  repository: https://exivity.github.io/bitnami-charts
   version: 32.x.x
 - condition: minio.enabled
   name: minio
-  repository: oci://registry-1.docker.io/bitnamicharts
+  repository: https://exivity.github.io/bitnami-charts
   version: 17.x.x
 - name: common
-  repository: oci://registry-1.docker.io/bitnamicharts
+  repository: https://exivity.github.io/bitnami-charts
   tags:
   - bitnami-common
   version: 2.x.x
@@ -50,4 +50,4 @@ maintainers:
 name: milvus
 sources:
 - https://github.com/bitnami/charts/tree/main/bitnami/milvus
-version: 16.0.3
+version: 16.0.4

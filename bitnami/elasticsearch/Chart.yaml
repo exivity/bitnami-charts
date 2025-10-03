@@ -16,10 +16,10 @@ appVersion: 9.1.2
 dependencies:
 - condition: global.kibanaEnabled
   name: kibana
-  repository: oci://registry-1.docker.io/bitnamicharts
+  repository: https://exivity.github.io/bitnami-charts
   version: 12.x.x
 - name: common
-  repository: oci://registry-1.docker.io/bitnamicharts
+  repository: https://exivity.github.io/bitnami-charts
   tags:
   - bitnami-common
   version: 2.x.x
@@ -35,4 +35,4 @@ maintainers:
 name: elasticsearch
 sources:
 - https://github.com/bitnami/charts/tree/main/bitnami/elasticsearch
-version: 22.1.9
+version: 22.1.10

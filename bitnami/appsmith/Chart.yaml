@@ -16,14 +16,14 @@ appVersion: 1.85.0
 dependencies:
 - condition: redis.enabled
   name: redis
-  repository: oci://registry-1.docker.io/bitnamicharts
+  repository: https://exivity.github.io/bitnami-charts
   version: 22.x.x
 - condition: mongodb.enabled
   name: mongodb
-  repository: oci://registry-1.docker.io/bitnamicharts
+  repository: https://exivity.github.io/bitnami-charts
   version: 16.x.x
 - name: common
-  repository: oci://registry-1.docker.io/bitnamicharts
+  repository: https://exivity.github.io/bitnami-charts
   tags:
   - bitnami-common
   version: 2.x.x
@@ -40,4 +40,4 @@ maintainers:
 name: appsmith
 sources:
 - https://github.com/bitnami/charts/tree/main/bitnami/appsmith
-version: 7.0.6
+version: 7.0.7

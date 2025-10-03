@@ -22,12 +22,12 @@ appVersion: 1.18.1
 dependencies:
 - condition: etcd.enabled
   name: etcd
-  repository: oci://registry-1.docker.io/bitnamicharts
+  repository: https://exivity.github.io/bitnami-charts
   tags:
   - cilium-database
   version: 12.x.x
 - name: common
-  repository: oci://registry-1.docker.io/bitnamicharts
+  repository: https://exivity.github.io/bitnami-charts
   tags:
   - bitnami-common
   version: 2.x.x
@@ -53,4 +53,4 @@ sources:
 - https://github.com/bitnami/containers/tree/main/bitnami/hubble-relay
 - https://github.com/bitnami/containers/tree/main/bitnami/hubble-ui
 - https://github.com/bitnami/containers/tree/main/bitnami/hubble-ui-backend
-version: 3.1.12
+version: 3.1.13
