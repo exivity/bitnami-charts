@@ -12,6 +12,7 @@ on:
       - 'bitnami/mongodb/**'
       - 'bitnami/external-dns/**'
       - 'bitnami/common/**'
+      - '.github/workflows/release.yml'
 
 jobs:
   release:
