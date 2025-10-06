@@ -6,7 +6,12 @@ on:
       - main
       - selective-charts  # Branch for selective chart releases
     paths:
-      - 'charts/**'
+      - 'bitnami/redis/**'
+      - 'bitnami/postgresql/**'
+      - 'bitnami/rabbitmq/**'
+      - 'bitnami/mongodb/**'
+      - 'bitnami/external-dns/**'
+      - 'bitnami/common/**'
 
 jobs:
   release:
@@ -22,9 +27,32 @@ jobs:
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
+      - name: Install Helm
+        uses: azure/setup-helm@v4
+        with:
+          version: '3.14.0'
+
+      - name: Prepare selective charts
+        run: |
+          CHARTS_TO_RELEASE="redis postgresql rabbitmq mongodb external-dns common"
+          
+          mkdir -p .cr-temp-charts
+
+          for chart in $CHARTS_TO_RELEASE; do
+            if [ -d "bitnami/$chart" ]; then
+              echo "Processing $chart..."
+              cp -r "bitnami/$chart" ".cr-temp-charts/"
+              rm -f ".cr-temp-charts/$chart/Chart.lock"
+            else
+              echo "Warning: bitnami/$chart not found"
+            fi
+          done
+
+          ls -la .cr-temp-charts/
+
       - name: Run chart-releaser
         uses: exivity/chart-releaser-action@v1.7.0
         with:
-          charts_dir: charts
+          charts_dir: .cr-temp-charts
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
